@@ -54,7 +54,7 @@ export const Footer: React.FC<FooterProps> = ({ onSelectTab, onOpenAdmin }) => {
               Pioneering advanced computational research, biomedical engineering, and institutional excellence across multidisciplinary frontiers.
             </p>
 
-            <div className="space-y-2 text-xl text-slate-600 pt-1">
+            <div className="space-y-2 text-base text-slate-600 pt-1">
               <div className="flex items-start gap-2">
                 <MapPin className="w-3.5 h-3.5 text-slate-400 mt-0.5 shrink-0" />
                 <span>840 Academic Oval, Tech Crest Heights, MA 02138</span>
@@ -72,10 +72,10 @@ export const Footer: React.FC<FooterProps> = ({ onSelectTab, onOpenAdmin }) => {
 
           {/* Column 2: Departments (2 cols) */}
           <div className="lg:col-span-2 space-y-3">
-            <h4 className="text-xl font-bold uppercase tracking-wider text-slate-900">
+            <h4 className="text-base font-bold uppercase tracking-wider text-slate-900">
               Departments
             </h4>
-            <ul className="space-y-2 text-xl text-slate-600">
+            <ul className="space-y-2 text-base text-slate-600">
               <li>
                 <button 
                   onClick={() => onSelectTab('academics')}
@@ -121,10 +121,10 @@ export const Footer: React.FC<FooterProps> = ({ onSelectTab, onOpenAdmin }) => {
 
           {/* Column 3: Quick Links (2 cols) */}
           <div className="lg:col-span-2 space-y-3">
-            <h4 className="text-xl font-bold uppercase tracking-wider text-slate-900">
+            <h4 className="text-base font-bold uppercase tracking-wider text-slate-900">
               Quick Links
             </h4>
-            <ul className="space-y-2 text-xl text-slate-600">
+            <ul className="space-y-2 text-base text-slate-600">
               <li>
                 <button 
                   onClick={() => onSelectTab('events')} 
@@ -170,10 +170,10 @@ export const Footer: React.FC<FooterProps> = ({ onSelectTab, onOpenAdmin }) => {
 
           {/* Column 4: Newsletter (4 cols) */}
           <div className="lg:col-span-4 space-y-3">
-            <h4 className="text-xl font-bold uppercase tracking-wider text-slate-900">
+            <h4 className="text-base font-bold uppercase tracking-wider text-slate-900">
               Academic Newsletter
             </h4>
-            <p className="text-xl text-slate-500 leading-relaxed">
+            <p className="text-base text-slate-500 leading-relaxed">
               Subscribe for quarterly research publications, guest lecture notices, and departmental breakthroughs.
             </p>
 
@@ -185,18 +185,18 @@ export const Footer: React.FC<FooterProps> = ({ onSelectTab, onOpenAdmin }) => {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter your institution email"
                   required
-                  className="bg-white border border-slate-200 rounded-lg px-3.5 py-2 text-xl w-full focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 text-slate-800 placeholder:text-slate-400"
+                  className="bg-white border border-slate-200 rounded-lg px-3.5 py-2 text-base w-full focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 text-slate-800 placeholder:text-slate-400"
                 />
                 <button
                   type="submit"
-                  className="bg-blue-600 hover:bg-blue-700 text-white text-xl font-medium px-4 py-2 rounded-lg shrink-0 transition-colors shadow-sm cursor-pointer"
+                  className="bg-blue-600 hover:bg-blue-700 text-white text-base font-medium px-4 py-2 rounded-lg shrink-0 transition-colors shadow-sm cursor-pointer"
                 >
                   Subscribe
                 </button>
               </div>
 
               {subscribed && (
-                <div className="flex items-center gap-1.5 text-xl text-emerald-600 font-medium">
+                <div className="flex items-center gap-1.5 text-base text-emerald-600 font-medium">
                   <CheckCircle2 className="w-3.5 h-3.5" />
                   <span>Subscription confirmed. Welcome to Luminary Dispatch.</span>
                 </div>
@@ -224,7 +224,7 @@ export const Footer: React.FC<FooterProps> = ({ onSelectTab, onOpenAdmin }) => {
         </div>
 
         {/* Bottom Row */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xl text-slate-400 gap-4">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-base text-slate-400 gap-4">
           <div>
             © 2025 Luminary Institute of Technology & Sciences. Chartered for Academic Excellence.
           </div>
