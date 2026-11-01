@@ -374,7 +374,87 @@ export const EventsPage: React.FC<EventsPageProps> = ({ onReservePass }) => {
         </div>
       </div>
 
-      {/* 5. SYNCHRONIZE CALENDAR & PROPOSE EVENT */}
+      {/* 5. CAMPUS MEDIA GALLERY */}
+      <section className="space-y-6">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
+          <div>
+            <div className="text-[10px] font-bold uppercase tracking-wider text-blue-600 mb-1">
+              CAMPUS STORIES IN MOTION
+            </div>
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+              Event Media Gallery
+            </h2>
+            <p className="text-slate-600 text-sm mt-2 max-w-2xl leading-relaxed">
+              Explore sample highlights from campus gatherings, research showcases, and student experiences.
+            </p>
+          </div>
+          <span className="inline-flex items-center gap-2 text-sm font-semibold text-blue-700 bg-blue-50 border border-blue-100 rounded-full px-4 py-2">
+            <Sparkles className="w-4 h-4" />
+            Demo media
+          </span>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <article className="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm">
+            <video
+              className="w-full aspect-video object-cover bg-slate-900"
+              controls
+              muted
+              playsInline
+              preload="metadata"
+              poster="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=900&q=80"
+            >
+              <source src="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4" type="video/mp4" />
+              Your browser does not support the video element.
+            </video>
+            <div className="p-5">
+              <p className="text-[10px] font-bold uppercase tracking-wider text-blue-600">EVENT HIGHLIGHTS</p>
+              <h3 className="text-lg font-bold text-slate-900 mt-1">Campus Gathering & Community</h3>
+              <p className="text-sm text-slate-600 mt-2 leading-relaxed">A sample video slot for event-day moments and campus celebrations.</p>
+            </div>
+          </article>
+
+          <article className="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm">
+            <video
+              className="w-full aspect-video object-cover bg-slate-900"
+              controls
+              muted
+              playsInline
+              preload="metadata"
+              poster="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80"
+            >
+              <source src="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4" type="video/mp4" />
+              Your browser does not support the video element.
+            </video>
+            <div className="p-5">
+              <p className="text-[10px] font-bold uppercase tracking-wider text-blue-600">LEARNING & INNOVATION</p>
+              <h3 className="text-lg font-bold text-slate-900 mt-1">Ideas, Discovery & Innovation</h3>
+              <p className="text-sm text-slate-600 mt-2 leading-relaxed">A placeholder for lectures, demonstrations, and student project showcases.</p>
+            </div>
+          </article>
+
+          <article className="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm">
+            <video
+              className="w-full aspect-video object-cover bg-slate-900"
+              controls
+              muted
+              playsInline
+              preload="metadata"
+              poster="https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=900&q=80"
+            >
+              <source src="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4" type="video/mp4" />
+              Your browser does not support the video element.
+            </video>
+            <div className="p-5">
+              <p className="text-[10px] font-bold uppercase tracking-wider text-blue-600">STUDENT EXPERIENCE</p>
+              <h3 className="text-lg font-bold text-slate-900 mt-1">Life Beyond the Classroom</h3>
+              <p className="text-sm text-slate-600 mt-2 leading-relaxed">A sample media card ready for real student-life and society footage.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      {/* 6. SYNCHRONIZE CALENDAR & PROPOSE EVENT */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
         
         {/* Left: Sync Calendar (7 cols) */}
