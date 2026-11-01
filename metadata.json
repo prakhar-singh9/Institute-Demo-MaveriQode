@@ -1,0 +1,6 @@
+{
+  "name": "Luminary Institute of Technology & Sciences",
+  "description": "Pioneering advanced computational research, biomedical engineering, and institutional excellence across multidisciplinary frontiers.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
