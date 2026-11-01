@@ -24,6 +24,7 @@ export const EventsPage: React.FC<EventsPageProps> = ({ onReservePass }) => {
   const [bookmarked, setBookmarked] = useState(false);
   const [showProposalModal, setShowProposalModal] = useState(false);
   const [proposalSubmitted, setProposalSubmitted] = useState(false);
+  const [showArchiveModal, setShowArchiveModal] = useState(false);
   
   // Reservation modal state
   const [activeReservationEvent, setActiveReservationEvent] = useState<string | null>(null);
@@ -331,7 +332,7 @@ export const EventsPage: React.FC<EventsPageProps> = ({ onReservePass }) => {
           </div>
 
           <button
-            onClick={() => alert("Digital Archives: Accessing 400+ indexed symposium video recordings.")}
+            onClick={() => setShowArchiveModal(true)}
             className="text-xs font-bold text-blue-600 hover:text-blue-800 flex items-center gap-1 cursor-pointer"
           >
             <span>Explore Complete Digital Archive</span>
@@ -451,6 +452,19 @@ export const EventsPage: React.FC<EventsPageProps> = ({ onReservePass }) => {
               <p className="text-sm text-slate-600 mt-2 leading-relaxed">A sample media card ready for real student-life and society footage.</p>
             </div>
           </article>
+
+          <article className="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm">
+            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=80" alt="Students collaborating during a campus workshop" className="w-full aspect-video object-cover" loading="lazy" />
+            <div className="p-5"><p className="text-[10px] font-bold uppercase tracking-wider text-blue-600">CAMPUS COMMUNITY</p><h3 className="text-lg font-bold text-slate-900 mt-1">Collaboration in Action</h3><p className="text-sm text-slate-600 mt-2 leading-relaxed">A photo highlight from student workshops and collaborative campus activities.</p></div>
+          </article>
+          <article className="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm">
+            <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=900&q=80" alt="Students celebrating at a university event" className="w-full aspect-video object-cover" loading="lazy" />
+            <div className="p-5"><p className="text-[10px] font-bold uppercase tracking-wider text-blue-600">STUDENT LIFE</p><h3 className="text-lg font-bold text-slate-900 mt-1">Moments to Remember</h3><p className="text-sm text-slate-600 mt-2 leading-relaxed">A sample photo from student celebrations, societies, and cultural events.</p></div>
+          </article>
+          <article className="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm">
+            <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=900&q=80" alt="Speakers and participants at a conference" className="w-full aspect-video object-cover" loading="lazy" />
+            <div className="p-5"><p className="text-[10px] font-bold uppercase tracking-wider text-blue-600">RESEARCH & IDEAS</p><h3 className="text-lg font-bold text-slate-900 mt-1">Conversations That Inspire</h3><p className="text-sm text-slate-600 mt-2 leading-relaxed">A sample image for guest lectures, conferences, and research presentations.</p></div>
+          </article>
         </div>
       </section>
 
@@ -540,6 +554,31 @@ export const EventsPage: React.FC<EventsPageProps> = ({ onReservePass }) => {
         </div>
 
       </div>
+
+      {/* Complete Digital Archive Modal */}
+      {showArchiveModal && (
+        <div className="fixed inset-0 z-[60] overflow-y-auto bg-slate-950/70 backdrop-blur-sm flex items-center justify-center p-4">
+          <div className="bg-white rounded-3xl max-w-6xl w-full max-h-[90vh] overflow-y-auto p-5 sm:p-8 shadow-2xl relative">
+            <button onClick={() => setShowArchiveModal(false)} aria-label="Close digital archive" className="absolute top-5 right-5 w-10 h-10 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center cursor-pointer"><X className="w-5 h-5" /></button>
+            <div className="pr-12 mb-7"><p className="text-[10px] font-bold uppercase tracking-widest text-blue-600">INSTITUTIONAL MEDIA LIBRARY</p><h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">Complete Digital Archive</h2><p className="text-sm text-slate-600 mt-2 max-w-2xl">Browse a larger collection of demo photographs from campus events, academic sessions, student activities, and research showcases.</p><span className="inline-flex mt-3 rounded-full bg-blue-50 text-blue-700 px-3 py-1 text-xs font-semibold">Sample archive · Demo content</span></div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {[
+                { src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=900&q=80", title: "International Symposium", category: "CONFERENCES" },
+                { src: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=80", title: "Student Collaboration", category: "CAMPUS LIFE" },
+                { src: "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=900&q=80", title: "Campus Celebrations", category: "STUDENT EVENTS" },
+                { src: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=900&q=80", title: "Ideas & Innovation", category: "RESEARCH" },
+                { src: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80", title: "Digital Learning", category: "ACADEMICS" },
+                { src: "https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=900&q=80", title: "University Gathering", category: "CAMPUS LIFE" },
+                { src: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=900&q=80", title: "Guest Speaker Session", category: "LECTURES" },
+                { src: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=900&q=80", title: "Community Showcase", category: "EVENTS" }
+              ].map((item) => (
+                <article key={item.title} className="rounded-2xl overflow-hidden border border-slate-200 bg-white"><img src={item.src} alt={item.title} loading="lazy" className="w-full aspect-[4/3] object-cover" /><div className="p-4"><p className="text-[10px] font-bold tracking-wider text-blue-600">{item.category}</p><h3 className="font-bold text-slate-900 mt-1">{item.title}</h3></div></article>
+              ))}
+            </div>
+            <div className="flex justify-end mt-7"><button onClick={() => setShowArchiveModal(false)} className="px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold cursor-pointer">Close archive</button></div>
+          </div>
+        </div>
+      )}
 
       {/* Reservation Pass Modal */}
       {activeReservationEvent && (
