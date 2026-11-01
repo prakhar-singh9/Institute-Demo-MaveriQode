@@ -264,7 +264,7 @@ export default function App() {
         )
       ) : (
         /* PUBLIC SITE */
-        <div className="flex-1 flex flex-col justify-between">
+        <div className="public-site flex-1 flex flex-col justify-between">
           <Navbar
             currentTab={currentTab}
             onSelectTab={handleSelectTab}
