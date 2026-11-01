@@ -36,18 +36,18 @@
 
 /* Improve readability across the public website without changing the admin dashboard. */
 .public-site [class~="text-xs"] {
-  font-size: 1rem !important;
-  line-height: 1.5rem !important;
-}
-
-.public-site [class~="text-[10px]"] {
   font-size: 0.875rem !important;
   line-height: 1.25rem !important;
 }
 
+.public-site [class~="text-[10px]"] {
+  font-size: 0.75rem !important;
+  line-height: 1rem !important;
+}
+
 .public-site [class~="text-[11px]"] {
-  font-size: 0.9375rem !important;
-  line-height: 1.375rem !important;
+  font-size: 0.75rem !important;
+  line-height: 1rem !important;
 }
 
 .public-site [class~="text-[9px]"] {
